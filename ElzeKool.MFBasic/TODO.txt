@@ -1,0 +1,24 @@
+﻿ TODO:
+ -----------------------------
+ [v] ':' is Token.CR 
+ [v] Not Equal, Less Or Equal and More or Equal
+ [v] ENDIF
+ [v] STEP
+ [v] WHILE -> WEND
+ [v] Refract Exceptions
+ [v] Refract Namespaces
+ [v] Labels
+ [v] Function support
+ [v] Flexible Token Types
+ [v] Optional Line Numbers
+ [v] Implement ' and REM
+ [v] Make sure the whole statement name is checked
+ [v] Strings with backslashes
+ [v] Tokenize at start
+ [v] Custom variable names
+ [v] String variables
+ [v] Floating point variables
+ [ ] Implement State Storage
+ [ ] Arrays with DIM
+ ----------------------------
+ 

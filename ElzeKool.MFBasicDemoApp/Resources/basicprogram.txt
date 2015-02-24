@@ -1,0 +1,48 @@
+' This is the start of the demo application
+' This program showcases the use of MFBasic
+
+		' Sample string variable
+		text$ = "Hallo world!"
+		
+		' Move to sub
+		GOSUB sub
+		
+		' Call routines and print output of numeric function
+		RANDOMIZE
+		PRINT INT(RND()*1000*10)
+				
+		' Create new floating point variable from function result
+		cosa = CINT(9.8)
+		
+		' For, Next loop
+		FOR i = 1 TO 10
+			IF i <= 5 THEN 
+				GOSUB sub2 
+			ELSE 
+				PRINT FORMATNUMBER$("#.0000", (i*cosa) )
+			ENDIF
+		NEXT i
+		
+		' Text should be aaaa else a program error occourd
+		IF (text$="aaaaa") THEN PRINT "Ok!"
+		
+		' End of this demo program
+		PRINT "End Of Program"
+		PRINT text$
+		
+		END
+		
+		' Subroutine 1
+		' Clear text variable
+		
+sub:	PRINT "Subroutine"
+		text$ = ""
+		RETURN
+		
+		
+		' Subroutine 2
+		' Add a to text variable
+		
+sub2:   PRINT "Five"
+		text$ = text$ + "a"
+		RETURN		

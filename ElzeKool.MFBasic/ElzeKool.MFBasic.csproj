@@ -1,0 +1,127 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <AssemblyName>MFBasic</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MFConsoleApplication1</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E77533DC-E71B-410E-A345-A5D4EB2963BD}</ProjectGuid>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MFBASIC_OPTIONAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MFBASIC_OPTIONAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <ItemGroup>
+    <Compile Include="Basic.cs" />
+    <Compile Include="Exceptions\BasicLanguageException.cs" />
+    <Compile Include="Exceptions\BasicParserException.cs" />
+    <Compile Include="Exceptions\BasicUnkownStatementException.cs" />
+    <Compile Include="NumericModifiers.cs" />
+    <Compile Include="OptionalIncludes\DateFormatter.cs" />
+    <Compile Include="OptionalIncludes\exMath.cs" />
+    <Compile Include="OptionalIncludes\NumberFormatter.cs" />
+    <Compile Include="StateStorage.cs" />
+    <Compile Include="StringModifiers.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Tokens\Functions\NumericFunctionToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\CIntToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\AcosToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\AsinToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\AtanToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\Atan2Token.cs" />
+    <Compile Include="Tokens\Functions\Numeric\AbsToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\PowToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\TanToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\CosToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\IntToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\NowToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\PIToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\RndToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\SinToken.cs" />
+    <Compile Include="Tokens\Functions\Numeric\StrPosToken.cs" />
+    <Compile Include="Tokens\Functions\StringFunctionToken.cs" />
+    <Compile Include="Tokens\Functions\String\Chr%24Token.cs" />
+    <Compile Include="Tokens\Functions\String\FormatDateTime%24Token.cs" />
+    <Compile Include="Tokens\Functions\String\FormatNumber%24Token.cs" />
+    <Compile Include="Tokens\Functions\String\ToLower%24Token.cs" />
+    <Compile Include="Tokens\Functions\String\ToUpper%24Token.cs" />
+    <Compile Include="Tokens\LabelToken.cs" />
+    <Compile Include="Tokens\Operators\LessOrEqualToken.cs" />
+    <Compile Include="Tokens\Operators\MoreOrEqualToken.cs" />
+    <Compile Include="Tokens\Operators\NotEqualToken.cs" />
+    <Compile Include="Tokens\Routine Helpers\EndIfToken.cs" />
+    <Compile Include="Tokens\Routine Helpers\StepToken.cs" />
+    <Compile Include="Tokens\Routine Helpers\TimerToken.cs" />
+    <Compile Include="Tokens\Routines\GeneralStatementToken.cs" />
+    <Compile Include="Tokens\Routines\RandomizeToken.cs" />
+    <Compile Include="Tokens\Routines\Sleep.cs" />
+    <Compile Include="Tokens\Routines\WendToken.cs" />
+    <Compile Include="Tokens\Routines\WhileToken.cs" />
+    <Compile Include="Tokens\Special Characters\CommaToken.cs" />
+    <Compile Include="Tokens\Special Characters\EndOfLineToken.cs" />
+    <Compile Include="Tokens\Routines\EndToken.cs" />
+    <Compile Include="Tokens\Routine Helpers\ElseToken.cs" />
+    <Compile Include="Tokens\Special Characters\EndOfInputToken.cs" />
+    <Compile Include="Tokens\ErrorToken.cs" />
+    <Compile Include="Tokens\Routines\ForToken.cs" />
+    <Compile Include="Tokens\Routines\GosubToken.cs" />
+    <Compile Include="Tokens\Routines\GotoToken.cs" />
+    <Compile Include="Tokens\Routines\IfToken.cs" />
+    <Compile Include="Tokens\Special Characters\LeftParenToken.cs" />
+    <Compile Include="Tokens\Routines\LetToken.cs" />
+    <Compile Include="Tokens\LineNumberToken.cs" />
+    <Compile Include="Tokens\Routines\NextToken.cs" />
+    <Compile Include="Tokens\NumericToken.cs" />
+    <Compile Include="Tokens\Operators\AndToken.cs" />
+    <Compile Include="Tokens\Operators\DivideToken.cs" />
+    <Compile Include="Tokens\Operators\EqualToken.cs" />
+    <Compile Include="Tokens\Operators\GreaterThenToken.cs" />
+    <Compile Include="Tokens\Operators\LessThenToken.cs" />
+    <Compile Include="Tokens\Operators\MinusToken.cs" />
+    <Compile Include="Tokens\Operators\ModulusToken.cs" />
+    <Compile Include="Tokens\Operators\MultiplyToken.cs" />
+    <Compile Include="Tokens\Operators\OrToken.cs" />
+    <Compile Include="Tokens\Operators\PlusToken.cs" />
+    <Compile Include="Tokens\Routines\PrintToken.cs" />
+    <Compile Include="Tokens\Routines\ReturnToken.cs" />
+    <Compile Include="Tokens\Routines\RemToken.cs" />
+    <Compile Include="Tokens\Special Characters\RightParenToken.cs" />
+    <Compile Include="Tokens\Special Characters\SemicolonToken.cs" />
+    <Compile Include="Tokens\StringToken.cs" />
+    <Compile Include="Tokens\Routine Helpers\ThenToken.cs" />
+    <Compile Include="Tokens\StringVariableToken.cs" />
+    <Compile Include="Tokens\TextToken.cs" />
+    <Compile Include="Tokens\Token.cs" />
+    <Compile Include="Tokens\Routine Helpers\ToToken.cs" />
+    <Compile Include="Tokens\NumericVariableToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Native" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENCE.txt" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+</Project>
